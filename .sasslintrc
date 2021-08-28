@@ -1,0 +1,81 @@
+.sasslintrcfiles:
+    include: 'src/scss/**/*.scss'
+rules:
+    # These rules are Errors
+    indentation:
+        - 2
+        - size: 4
+    final-newline:
+        - 2
+    empty-line-between-blocks:
+        - 2
+    quotes:
+        - 2
+    space-after-comma:
+        - 2
+    border-zero:
+        - 2
+    space-between-parens:
+        - 2
+    no-trailing-whitespace:
+        - 2
+    empty-args:
+        - 2
+    single-line-per-selector:
+        - 2
+    space-before-brace:
+        - 2
+    attribute-quotes:
+        - 2
+    no-qualifying-elements:
+        - 2
+        -
+            allow-element-with-attribute: true
+            allow-element-with-class: true
+    hex-notation:
+        - 2
+    declarations-before-nesting:
+        - 2
+    pseudo-element:
+        - 2
+    no-css-comments:
+        - 0
+    no-ids:
+        - 2
+    trailing-semicolon:
+        - 2
+    class-name-format:
+        - 2
+    space-after-colon:
+        - 2
+    nesting-depth:
+        - 2
+        - max-depth: 3
+
+    # These rules are Disabled
+    variable-name-format:
+        - 0
+    mixin-name-format:
+        - 0
+    property-sort-order:
+        - 0
+    leading-zero:
+        - 0
+    no-trailing-zero:
+        - 0
+    placeholder-in-extend:
+        - 0
+    force-pseudo-nesting:
+        - 0
+    mixins-before-declarations:
+        - 0
+    no-color-literals:
+        - 0
+    force-attribute-nesting:
+        - 0
+    space-around-operator:
+        - 0
+    force-element-nesting:
+        - 0
+    function-name-format:
+        - 0

@@ -1,0 +1,51 @@
+{
+  "name": "hero-test",
+  "author": "Gabriel Goethe",
+  "version": "0.0.1",
+  "description": "React/Redux app with cards and tags",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --verbose --coverage",
+    "format": "prettier --write --list-different \"src/**\"",
+    "lint": "eslint --ext .jsx,.js --cache \"src/**\";"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cross-fetch": "^3.1.4",
+    "jest-dom": "^4.0.0",
+    "prettier": "2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-scripts": "^4.0.3",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.js",
+      "!**/__tests__/**"
+    ]
+  },
+  "repository": "git@github.com:GaboGo/hero-test.git",
+  "devDependencies": {
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "redux-immutable-state-invariant": "^2.1.0"
+  }
+}
