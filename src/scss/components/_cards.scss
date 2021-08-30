@@ -1,0 +1,113 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    padding: 0 $large;
+
+    @at-root #{&}--card {
+        background-color: transparent;
+        border: $extra-extra-small solid $card-color;
+        padding: 0;
+        height: $extra-extra-large;
+        width: auto;
+        perspective: 1000px;
+        cursor: pointer;
+
+        &:hover .cards-container--card-inner {
+          transform: rotateY(180deg);
+        }
+    }
+
+     @at-root #{&}--message {
+        font-size: $font-large;
+        text-align: center;
+        width: 100%;
+        margin: $small;
+     }
+
+
+    @at-root #{&}--card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    @at-root #{&}--card-front {
+        color: black;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        /* Safari */
+        backface-visibility: hidden;
+    }
+
+    @at-root #{&}--card-back {
+        transform: rotateY(180deg);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        /* Safari */
+        backface-visibility: hidden;
+    }
+
+    @at-root #{&}--card-front-img {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    @at-root #{&}--card-front-description {
+        font-size: $font-medium;
+        @include truncate();
+        text-align: left;
+        padding: 0 $small;
+    }
+
+    @at-root #{&}--card-back-description {
+        overflow: hidden;
+    }
+
+    @at-root #{&}--card-back-cta {
+        bottom: $extra-small;
+        position: absolute;
+        right: $small;
+    }
+
+    @at-root #{&}--card-front-content {
+        h2 {
+            padding: 0 $extra-small;
+        }
+    }
+
+    @at-root #{&}--card-back-img {
+        width: 100%;
+        max-height: 100%;
+        opacity: 0.6;
+        transform: rotateY(180deg);
+    }
+}
+
+// If the screen size is 900px or less
+@media only screen and (max-width: 900px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 $small;
+
+        @at-root #{&}--card {
+            height: $extra-large;
+        }
+
+        @at-root #{&}--card-front-description {
+            display: none;
+        }
+
+        .filters-container {
+            display: none;
+        }
+    }
+}

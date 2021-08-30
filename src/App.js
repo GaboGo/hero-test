@@ -9,7 +9,7 @@ export default function App() {
 
     useEffect(() => {
         dispatch(fetchCards());
-    }, []);
+    }, [dispatch]);
 
     return (
         <div data-testid="APP-TEST-ID" className="App">

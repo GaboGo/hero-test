@@ -1,0 +1,138 @@
+
+.filters-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    font-family: 'Segoe UI',Tahoma, Geneva,Verdana,sans-serif;
+
+    @at-root #{&}--list {
+        list-style: none;
+        padding:$small $large;
+        margin: $zero;
+    }
+
+    @at-root #{&}--list-card {
+        list-style: none;
+        padding: $zero $small;
+        margin: $zero;
+        text-align: left;
+    }
+
+    @at-root #{&}--list-item {
+        display: inline;
+        margin-right: $extra-medium-small;
+    }
+
+    @at-root #{&}--list-label {
+        display: inline-block;
+        background-color:$tag-background-color;
+        border: $almost-zero solid $tag-selected-color;
+        color: $tag-selected-color;
+        white-space: nowrap;
+        margin: $extra-extra-small $zero;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: all .2s;
+        font-weight: $font-weigth-bold;
+        padding: $extra-medium-small;
+        cursor: pointer;
+
+        &:hover,
+        &:focus-within {
+            border: $almost-zero solid $tag-focus-state;
+            transition: all .2s;
+        }
+    }
+
+    @at-root #{&}--list-input {
+
+        &:checked+label {
+            border: $almost-zero solid $tag-selected-color;
+            background-color:$tag-selected-color;
+            color: $tag-background-color;
+            transition: all .2s;
+        }
+        
+        &[type='checkbox'] {
+            display: absolute;
+            position: absolute;
+            opacity: $zero;
+        }
+    }
+
+    @at-root #{&}--dropdown {
+        display: none;
+    }
+}
+
+// If the screen size is 768px or less
+@media only screen and (max-width: 768px) {
+    .filters-container {
+        display:contents;
+
+        @at-root #{&}--list {
+            display: none;
+        }
+
+        @at-root #{&}--dropdown {
+            display: block;
+            margin: $small;
+
+            ul {
+              padding-left: $small;
+              list-style: none;
+            }
+        }
+
+        @at-root #{&}--dropdown-button {
+            background-color: white;
+            color: black;
+            border: $almost-zero solid $tag-selected-color;
+            padding: $small;
+            font-size: $small;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        @at-root #{&}--dropdown-content {
+            position: absolute;
+            background-color: $dropdown-background-color;
+            min-width: auto;
+            box-shadow: $zero $extra-medium-small $small $zero rgba(0, 0, 0, 0.2);
+            z-index: $index;
+        }
+
+        @at-root #{&}--list-item {
+            display: list-item;
+        }
+
+        @at-root #{&}--list-input {
+
+            &:checked+label {
+                border: $zero;
+                background-color: $zero;
+                color: $zero;
+            }
+
+            &[type='checkbox'] {
+                position:initial;
+                opacity: $index;
+            }
+        }
+
+        @at-root #{&}--list-label {
+            background-color: $dropdown-background-color;
+            border: $zero;
+
+            &:hover,
+            &:focus-within {
+                border: $zero;
+            }
+        }
+    }
+}

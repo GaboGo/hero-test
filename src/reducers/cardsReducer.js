@@ -1,8 +1,7 @@
-import Card from '../components/Cards/Card';
 import { REQUEST_CARDS, RECEIVE_CARDS, UPDATE_CARDS } from '../constants/actionTypes';
 import initialState from './initialState';
 
-const populateTags = (cards) => {
+export const populateTags = (cards) => {
     let tags = [];
     cards.map((card) => {
         card.tags.map((tag) => {
@@ -14,7 +13,7 @@ const populateTags = (cards) => {
     return tags.sort();
 };
 
-const getFilteredCards = (data, filters) => {
+export const getFilteredCards = (data, filters) => {
     return filters.length > 0
         ? data.filter((card) => {
               let applyFilter = 0;
