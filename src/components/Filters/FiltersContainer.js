@@ -37,7 +37,25 @@ const FiltersContainer = ({ cardTags, isCard }) => {
                     onClick={() => setOpen(!open)}
                     className="filters-container--dropdown-button"
                 >
-                    Dropdown
+                    TAGS
+                    {!open && (
+                        <img
+                            className="filters-container--dropdown-button-open-img"
+                            alt="dropdwon-open"
+                            src={process.env.PUBLIC_URL + '/arrow_open.png'}
+                            height="20"
+                            width="20"
+                        ></img>
+                    )}
+                    {open && (
+                        <img
+                            className="filters-container--dropdown-button-close-img"
+                            alt="dropdwon-close"
+                            src={process.env.PUBLIC_URL + '/arrow_close.png'}
+                            height="20"
+                            width="20"
+                        ></img>
+                    )}
                 </button>
                 {open && (
                     <div className="filters-container--dropdown-content">

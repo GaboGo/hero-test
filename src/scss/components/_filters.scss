@@ -99,6 +99,12 @@
             cursor: pointer;
         }
 
+         @at-root #{&}--dropdown-button-open-img,
+         #{&}--dropdown-button-close-img {
+            position: absolute;
+            right: $large;
+         }
+
         @at-root #{&}--dropdown-content {
             position: absolute;
             background-color: $dropdown-background-color;
@@ -122,12 +128,14 @@
             &[type='checkbox'] {
                 position:initial;
                 opacity: $index;
+                cursor: pointer;
             }
         }
 
         @at-root #{&}--list-label {
             background-color: $dropdown-background-color;
             border: $zero;
+            cursor:default;
 
             &:hover,
             &:focus-within {
