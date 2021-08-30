@@ -1,5 +1,6 @@
-.sasslintrcfiles:
+files:
     include: 'src/scss/**/*.scss'
+    ignore: 'node_modules/**/*.scss'
 rules:
     # These rules are Errors
     indentation:

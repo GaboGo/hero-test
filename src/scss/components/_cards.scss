@@ -15,16 +15,16 @@
         cursor: pointer;
 
         &:hover .cards-container--card-inner {
-          transform: rotateY(180deg);
+            transform: rotateY(180deg);
         }
     }
 
-     @at-root #{&}--message {
+    @at-root #{&}--message {
         font-size: $font-large;
         text-align: center;
         width: 100%;
         margin: $small;
-     }
+    }
 
 
     @at-root #{&}--card-inner {
@@ -37,7 +37,7 @@
     }
 
     @at-root #{&}--card-front {
-        color: black;
+        color: $tag-selected-color;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -61,11 +61,37 @@
         max-height: 100%;
     }
 
+    @at-root #{&}--card-ribbon-wrapper {
+        width: 7.812rem;
+        height: $large * 2;
+        overflow: hidden;
+        position: absolute;
+        top: $zero;
+        right: $zero;
+    }
+
+    @at-root #{&}--card-ribbon {
+        font: bold $small sans-serif;
+        text-align: center;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        position: relative;
+        padding: $extra-medium-small $zero;
+        top: $small;
+        left: $small;
+        width: 9rem;
+        background-color: $tag-selected-color;
+        color: $tag-background-color;
+        font-style: italic;
+    }
+
     @at-root #{&}--card-front-description {
         font-size: $font-medium;
-        @include truncate();
+        @include truncate;
         text-align: left;
-        padding: 0 $small;
+        padding: $zero $small;
     }
 
     @at-root #{&}--card-back-description {
@@ -80,7 +106,7 @@
 
     @at-root #{&}--card-front-content {
         h2 {
-            padding: 0 $extra-small;
+            padding: $zero $extra-small;
         }
     }
 

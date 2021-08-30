@@ -6,8 +6,10 @@ const Card = ({ data }) => {
     return (
         <div tabIndex="-1" className="cards-container--card">
             <div className="cards-container--card-inner">
-                {' '}
                 <div className="cards-container--card-front">
+                    <div className="cards-container--card-ribbon-wrapper">
+                        <div className="cards-container--card-ribbon">FEATURED</div>
+                    </div>
                     <img
                         className="cards-container--card-front-img"
                         alt={data?.title}

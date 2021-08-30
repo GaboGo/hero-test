@@ -4,11 +4,11 @@
     align-items: center;
     justify-content: center;
     height: auto;
-    font-family: 'Segoe UI',Tahoma, Geneva,Verdana,sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     @at-root #{&}--list {
         list-style: none;
-        padding:$small $large;
+        padding: $small $large;
         margin: $zero;
     }
 
@@ -26,7 +26,7 @@
 
     @at-root #{&}--list-label {
         display: inline-block;
-        background-color:$tag-background-color;
+        background-color: $tag-background-color;
         border: $almost-zero solid $tag-selected-color;
         color: $tag-selected-color;
         white-space: nowrap;
@@ -50,14 +50,13 @@
     }
 
     @at-root #{&}--list-input {
-
         &:checked+label {
             border: $almost-zero solid $tag-selected-color;
-            background-color:$tag-selected-color;
+            background-color: $tag-selected-color;
             color: $tag-background-color;
             transition: all .2s;
         }
-        
+
         &[type='checkbox'] {
             display: absolute;
             position: absolute;
@@ -73,7 +72,7 @@
 // If the screen size is 768px or less
 @media only screen and (max-width: 768px) {
     .filters-container {
-        display:contents;
+        display: contents;
 
         @at-root #{&}--list {
             display: none;
@@ -84,14 +83,14 @@
             margin: $small;
 
             ul {
-              padding-left: $small;
-              list-style: none;
+                padding-left: $small;
+                list-style: none;
             }
         }
 
         @at-root #{&}--dropdown-button {
-            background-color: white;
-            color: black;
+            background-color: $tag-background-color;
+            color: $tag-selected-color;
             border: $almost-zero solid $tag-selected-color;
             padding: $small;
             font-size: $small;
@@ -99,11 +98,11 @@
             cursor: pointer;
         }
 
-         @at-root #{&}--dropdown-button-open-img,
-         #{&}--dropdown-button-close-img {
+        @at-root #{&}--dropdown-button-open-img,
+        #{&}--dropdown-button-close-img {
             position: absolute;
             right: $large;
-         }
+        }
 
         @at-root #{&}--dropdown-content {
             position: absolute;
@@ -126,7 +125,7 @@
             }
 
             &[type='checkbox'] {
-                position:initial;
+                position: initial;
                 opacity: $index;
                 cursor: pointer;
             }
@@ -135,7 +134,7 @@
         @at-root #{&}--list-label {
             background-color: $dropdown-background-color;
             border: $zero;
-            cursor:default;
+            cursor: default;
 
             &:hover,
             &:focus-within {
