@@ -1,35 +1,30 @@
 ## React Coding Challenge
 
-Responsive Data Driven Filter Grid & Data Card Component
+## Available Scripts
 
-Pick your tools, construct the Filter Grid & Data Card Component in a scalable format.
+In the project directory, you can run:
 
-Requirements:
-Filter Grid Component: 3 columns for desktop, 2 for mobile.
-Data Card vars:
-String: ID
-Array: Tags
-String: Title
-String: Image URL
-String: Description
-Boolean: featured
-Sample Data
+### `npm start`
 
-{  
- "id":"Nerium",
-"tags":["CMS Selection", "Experience Design"],
-"image":"http://herodigi....jpg",
-"title":"Nerium: Reimagining the digital CX for Nerium International",
-"description":"As Nerium Internation....",
-"featured":0
-}
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Content cards flip on hover for desktop, flip on tap for mobile. 3D CSS transform.
-Filters are compounding, if Tag #1 & Tag #2 are selected, only show cards with both tags. If no filters are selected, show all cards.
-Filters distribute as shown below, and become a dropdown on mobile.
-All cards must be uniform in height, and support any amount of content. Note the text truncation in the mockup below.
-Filters are buttons on desktop, dropdown on mobile
-Parse this JSON file to populate your content
-Utilize React as your framework
-Use SASS for your style system following the BEM methodology
-Mockups below
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `npm run test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run format`
+
+Format code with prettier rules
+
+### `npm run lint`
+
+Launches ES lint rules
+
+### `npm run sass-lint`
+
+Launches Sass lint rules
